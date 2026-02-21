@@ -245,6 +245,7 @@ export default function App() {
           onStart={startBatch}
           onPause={pauseBatch}
           onStop={stopBatch}
+          onClear={clearJobs}
         />
         <ConfigPanel config={config} onChange={setConfig} runState={runState} />
       </main>

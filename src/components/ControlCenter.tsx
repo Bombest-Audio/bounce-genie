@@ -13,6 +13,7 @@ interface Props {
   onStart: () => void;
   onPause: () => void;
   onStop: () => void;
+  onClear: () => void;
 }
 
 const WAVE_BARS = Array.from({ length: 32 }, (_, i) => i);
@@ -168,7 +169,7 @@ function Waveform({ paused }: { paused: boolean }) {
   );
 }
 
-export function ControlCenter({ jobs, runState, currentJobIndex, result, logMessages, completedCount, failedCount, onStart, onPause, onStop }: Props) {
+export function ControlCenter({ jobs, runState, currentJobIndex, result, logMessages, completedCount, failedCount, onStart, onPause, onStop, onClear }: Props) {
   const logRef = useRef<HTMLDivElement>(null);
   const currentJob = currentJobIndex >= 0 ? jobs[currentJobIndex] : null;
   const total = jobs.length;
@@ -398,7 +399,7 @@ export function ControlCenter({ jobs, runState, currentJobIndex, result, logMess
                 </svg>
                 Run Again
               </button>
-              <button className="btn btn-secondary" onClick={() => window.location.reload()}>
+              <button className="btn btn-secondary" onClick={onClear}>
                 New Batch
               </button>
             </div>
