@@ -1,2 +1,0 @@
-[console_scripts]
-bounce-genie = bounce_genie.cli:main
