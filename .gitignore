@@ -1,14 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
+.vite/
+
+# Tauri build artifacts
+src-tauri/target/
+src-tauri/gen/
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-build/
-dist/
 *.egg-info/
 *.egg
 .eggs/
-.env
 .venv
 venv/
 env/
@@ -17,6 +27,25 @@ env/
 .pytest_cache/
 .coverage
 htmlcov/
-*.log
-.DS_Store
+
+# Editor
+.vscode/
+.idea/
 *.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
