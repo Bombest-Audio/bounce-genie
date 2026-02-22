@@ -1,0 +1,2 @@
+watchdog>=4.0
+twilio>=9.0

@@ -10,6 +10,24 @@ build/
 src-tauri/target/
 src-tauri/gen/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+.eggs/
+.venv
+venv/
+env/
+.tox/
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
 # Editor
 .vscode/
 .idea/
